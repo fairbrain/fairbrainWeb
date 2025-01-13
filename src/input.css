@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navmenu__list li {
+  @apply relative;
+}
+
+.navmenu__list li:hover {
+  @apply scale-105 transition-all;
+}
+
+.navmenu__list li::after {
+  content: '';
+  @apply bg-[#ff5500] h-[3px] w-0 absolute bottom-[-10px] rounded-full left-1/2 -translate-x-1/2 transition-all duration-500;
+}
+
+.navmenu__list li.active::after {
+  @apply block w-[120%];
+}
+
+.navmenu__list li:hover::after {
+  @apply block w-full;
+}
+
+.navmenu__list li:last-child::after {
+  @apply hidden;
+}
+
+.hero {
+  background: url('../images/background.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.hero__content h1 {
+  text-shadow: 0 0 8px rgba(253, 253, 253, 0.899);
+}
+
+.about-section {
+  background: linear-gradient(rgba(41, 41, 41, 0.955), rgba(23, 23, 23, 0.653)),
+    url('../images/about-banner.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.about-section .stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.our-services {
+  background: linear-gradient(rgba(41, 41, 41, 0.955), rgba(23, 23, 23, 0.653)),
+    url('../images/service-bg.png') no-repeat center bottom/cover;
+  min-height: 120vh;
+  background-attachment: fixed;
+}
+.our-portfolio {
+  background: linear-gradient(rgba(41, 41, 41, 0.955), rgba(23, 23, 23, 0.653)),
+    url('../images/service-bg.png') no-repeat center top/cover;
+}
+.service-card img {
+  @apply w-full h-[250px] rounded-3xl  border;
+}
+.service-card {
+  @apply p-4 rounded-lg shadow-lg;
+}
+
+.our-services .slick-slider .slick-slide {
+  @apply scale-90 opacity-50;
+}
+.our-services .slick-slider .slick-current {
+  @apply scale-[1.1] opacity-100;
+}
+.our-services .slick-dots li button:before {
+  @apply text-[#ff5500];
+}
+.our-services .slick-dots li.slick-active button:before {
+  @apply text-[#ffffff];
+}
+
+/* CUSTOM TABS */
+.tabs {
+  max-width: 100%;
+  margin: auto;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px;
+}
+
+.tab-button {
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background 0.3s;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.tab-button:hover {
+  color: #ff5500;
+  scale: 1.1;
+}
+
+.tab-button.active {
+  color: #ff5500;
+  scale: 1.2;
+}
+
+.tab-contents {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+/* CUSTOM TABS */
+
+.start-new-project {
+  background: linear-gradient(#87bad1b5, #87bad1cf),
+    url('../images/start-project.jpg') no-repeat center center/cover;
+}
+
+.start-new-project h3{
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.899);
+}
+
+.process-step{
+  @apply relative h-[100px] mx-auto justify-center flex aspect-square border-2 border-[#ffffff] rounded-full p-4;
+}
+
+.process-step span{
+  @apply inline-flex absolute -top-3 left-1/2 -translate-x-1/2 text-sm h-5 aspect-square justify-center items-center bg-[#ffbd1a] font-bold rounded-full;
+}
+
+.process-whyus-family{
+  background: url('../images/service-bg (1).png') no-repeat top center/cover;
+  background-attachment: fixed;
+}
+
+.why-choose-content,.why-choose-image{
+  @apply p-10 rounded-3xl;
+  background-color: rgba(41, 41, 41, 0.469);
+  backdrop-filter: blur(3px);
+}
+
+.chart-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 1rem;
+}
+
+.ring-chart {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    white 0%,
+    white 0%,
+    black 0% 100%
+  );
+
+  position: relative;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.ring-chart::after {
+  content: '';
+  width: 70%;
+  height: 70%;
+  background: url('../images/service-bg (1).png') no-repeat top center/cover;
+  background-attachment: fixed;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.percentage-labels {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chart-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+

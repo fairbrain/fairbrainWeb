@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <title>Fairbrain</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="font-poppins">
+    <!-- HEADER SECTION -->
+    <header class="mx-auto py-2 px-4 bg-dark sticky top-0 z-50">
+        <div class="container flex justify-between items-center">
+            <div class="logo flex items-center">
+                <button type="button" class="text-2xl text-white" aria-label="Menu">
+                    <i class="ri-menu-2-line" aria-hidden="true"></i>
+                </button>
+                <img src="./images/logo-landscape.png" alt="Fairbrain Logo" class="w-[180px]">
+            </div>
+            <nav aria-label="Main Navigation" class="navmenu md:block hidden">
+                <ul class="flex items-center text-white gap-10 navmenu__list">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li class="bg-lightDark py-2 ps-2 pe-5 rounded-2xl text-sm active:scale-95">
+                        <a href="#" aria-label="User Profile">
+                            <i class="ri-user-fill text-xl p-1 rounded-full text-[#606667] bg-[#303839] align-middle me-2"
+                                aria-hidden="true"></i>Login
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button"
+                class="nav__toggler text-white text-2xl border border-[#303839] py-1 px-3 rounded-xl shadow-2xl inline-block shadow-[white] active:scale-95 md:hidden">
+                <i class="ri-menu-fold-fill"></i>
+            </button>
+        </div>
+    </header>
+    <!-- HEADER SECTION -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero bg-dark text-white py-20">
+            <div class="container h-full">
+                <div class="hero__content text-center h-full flex flex-col justify-center items-center">
+                    <h1 class="sm:text-5xl text-4xl font-bold">Your ‘ONE STOP’ Creative Source</h1>
+                    <p class=" md:text-lg mt-4 md:w-[60%] w-full px-2 font-light text-sm">Lorem ipsum dolor sit amet,
+                        consectetuer adipiscing elit, sed
+                        diam nonummy nibh
+                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad </p>
+                    <div class="hero__search mt-8">
+                        <form action="#"
+                            class="bg-[#303839a1] text-white px-4 py-1 rounded-xl md:w-[600px] w-full flex items-center">
+                            <input type="text" placeholder="Type a word to find"
+                                class="bg-transparent text-white border-0 outline-0 w-full">
+                            <button type="submit" class="text-dark px-4 py-1 rounded-xl"><i
+                                    class="ri-search-2-line text-primary"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="photo-collage relative mt-8">
+                    <img src="./images/hero-1.jpg" alt="hero image"
+                        class="hero-image bg-white rounded-[50px] border-2 object-left object-cover mt-8 w-[300px] h-[300px]">
+                    <img src="./images/hero-2.jpg" alt="hero image"
+                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[250px] h-[250px]">
+                    <img src="./images/hero-3.jpg" alt="hero image"
+                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[250px] h-[250px]">
+                    <img src="./images/hero-4.jpg" alt="hero image"
+                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[250px] h-[250px]">
+                    <img src="./images/hero-5.jpg" alt="hero image"
+                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[400px] h-[400px]">
+                    <img src="./images/hero-6.jpg" alt="hero image"
+                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[300px] h-[300px]">
+                </div>
+            </div>
+        </section>
+        <section class="about-section border-y-2 py-5">
+            <div class="container p-5">
+                <h2 class="text-center md:text-5xl text-white font-bold">About <span class="text-primary">Us</span></h2>
+                <h3 class="text-3xl text-center text-white my-5 font-semibold">We Bring Your <span class="stroke">Idea
+                        To</span> Reality
+                </h3>
+                <p class="text-white font-extralight">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                    nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat
+                    volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                    nisl ut aliquip ex ea commodo consequat. Duis
+                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+                    eu feugiat nulla facilisis at vero eros et accumsan
+                    et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
+                    nulla facilisi.</p>
+                <p class="text-white font-extralight">
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    ut laoreet dolore magna aliquam erat
+                    volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                    nisl ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat
+                    volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                    nisl ut aliquip ex ea commodo consequat. Duis
+                    autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+                    eu feugiat nulla facilisis at vero eros et accumsan
+                    et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
+                    nulla facilisi.
+                </p>
+                <div class="from-about-navigations flex justify-center gap-10 my-5">
+                    <a href="#" class="text-xl text-white bg-primary px-10 py-2 rounded-3xl shadow">Join Us</a>
+                    <a href="#" class="text-white border-2 border-white px-10 py-2 rounded-3xl shadow">Our Gallery</a>
+                </div>
+            </div>
+        </section>
+        <section class="our-services overflow-hidden">
+            <div class="container p-5">
+                <h2 class="text-center md:text-5xl text-white font-bold">Our <span class="text-primary">Services</span>
+                </h2>
+                <h3 class="text-3xl text-center text-white mt-5 mb-2 font-semibold w-[55%] mx-auto">You can check out
+                    our work. Are you ready
+                    for a better, more productive <span class="text-primary">Progress?</span>
+                </h3>
+                <p class="text-white font-extralight text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit, sed diam</p>
+
+            </div>
+            <div class="slick-slider mt-10">
+                <div class="service-card relative">
+                    <img src="./images/ser-1.jpg" alt="Slide 1">
+                </div>
+                <div class="service-card relative">
+                    <img src="./images/ser-2.jpg" alt="Slide 1">
+                </div>
+                <div class="service-card relative">
+                    <img src="./images/ser-3.jpg" alt="Slide 1">
+                </div>
+                <div class="service-card relative">
+                    <img src="./images/ser-4.jpg" alt="Slide 1">
+                </div>
+                <div class="service-card relative">
+                    <img src="./images/ser-5.jpg" alt="Slide 1">
+                </div>
+            </div>
+        </section>
+        <section class="our-portfolio">
+            <div class="container p-5 bg-[#353439] relative -top-[80px] z-10 rounded-[50px]">
+                <h2 class="text-center md:text-5xl text-white font-bold">Our <span class="text-primary">Portfolio</span>
+                </h2>
+                <p class="text-white font-extralight text-center w-[60%] mx-auto">Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis</p>
+
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">WEB DESIGN</button>
+                        <button class="tab-button" data-tab="tab2">GRAPHIC DESIGN</button>
+                        <button class="tab-button" data-tab="tab3">BRANDING</button>
+                        <button class="tab-button" data-tab="tab4">LOGO</button>
+                        <button class="tab-button" data-tab="tab5">MARKETING</button>
+                        <button class="tab-button" data-tab="tab6">ADVERTISMENT</button>
+                    </div>
+                    <div class="tab-contents">
+                        <div id="tab1" class="tab-content active">
+                            <h2>Content for Tab 1</h2>
+                            <p>This is the content for the first tab.</p>
+                        </div>
+                        <div id="tab2" class="tab-content">
+                            <h2>Content for Tab 2</h2>
+                            <p>This is the content for the second tab.</p>
+                        </div>
+                        <div id="tab3" class="tab-content">
+                            <h2>Content for Tab 3</h2>
+                            <p>This is the content for the third tab.</p>
+                        </div>
+                        <div id="tab4" class="tab-content">
+                            <h2>Content for Tab 4</h2>
+                            <p>This is the content for the third tab.</p>
+                        </div>
+                        <div id="tab5" class="tab-content">
+                            <h2>Content for Tab 5</h2>
+                            <p>This is the content for the third tab.</p>
+                        </div>
+                        <div id="tab6" class="tab-content">
+                            <h2>Content for Tab 6</h2>
+                            <p>This is the content for the third tab.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="start-new-project">
+            <div class="container p-10">
+                <h3 class="text-center text-6xl font-bold text-white mb-5">START A NEW PROJECT</h3>
+                <form action="#" class="w-[70%] mx-auto grid md:grid-cols-4 grid-cols-1 items-center gap-4">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name"
+                            class="w-full py-2 px-3 rounded-md border-none outline-none">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email"
+                            class="w-full py-2 px-3 rounded-md border-none outline-none">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone"
+                            class="w-full py-2 px-3 rounded-md border-none outline-none">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="bg-[#ffbd1a] text-black px-4 py-2 rounded-md w-full">Send
+                            Request</button>
+                    </div>
+                </form>
+                <p class="text-sm text-white text-center mt-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Dolorem sequi cumque facere!</p>
+
+            </div>
+        </section>
+        <section class="process-whyus-family p-5 ">
+            <div class="our-process bg-[#353439] p-5 rounded-[50px] ">
+                <h2 class="text-center md:text-5xl text-white font-bold mb-4">Our <span
+                        class="text-primary">Process</span>
+                </h2>
+                <p class="w-[50%] text-sm mx-auto text-center text-white">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Deserunt eius assumenda mollitia quibusdam repudiandae porro.</p>
+                <div class="process-steps flex mt-5 gap-10 justify-center">
+                    <div class="psteps text-center">
+                        <div class="process-step mb-2">
+                            <img src="./images/our process logo 6-01.png" alt="process logo">
+                            <span>1</span>
+                        </div>
+                        <p class="uppercase text-sm text-white font-semibold mb-2">request call</p>
+                        <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="psteps text-center">
+                        <div class="process-step mb-2">
+                            <img src="./images/our process logo 5-01.png" alt="process logo">
+                            <span>2</span>
+                        </div>
+                        <p class="uppercase text-sm text-white font-semibold mb-2">consultation</p>
+                        <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="psteps text-center">
+                        <div class="process-step mb-2">
+                            <img src="./images/our process logo 4-01.png" alt="process logo">
+                            <span>3</span>
+                        </div>
+                        <p class="uppercase text-sm text-white font-semibold mb-2">planning</p>
+                        <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="psteps text-center">
+                        <div class="process-step mb-2">
+                            <img src="./images/our process logo 3-01.png" alt="process logo">
+                            <span>4</span>
+                        </div>
+                        <p class="uppercase text-sm text-white font-semibold mb-2">work process</p>
+                        <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="psteps text-center">
+                        <div class="process-step mb-2">
+                            <img src="./images/our process logo 2-01.png" alt="process logo">
+                            <span>5</span>
+                        </div>
+                        <p class="uppercase text-sm text-white font-semibold mb-2">correcting</p>
+                        <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="psteps text-center">
+                        <div class="process-step mb-2">
+                            <img src="./images/our process logo 1-01.png" alt="process logo">
+                            <span>6</span>
+                        </div>
+                        <p class="uppercase text-sm text-white font-semibold mb-2">deliver</p>
+                        <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="whyus">
+                <div class="grid grid-cols-2 p-5 gap-5">
+                    <div class="why-choose-content">
+                        <h3 class="text-4xl font-bold text-white mb-5">WHY CHOOSE <span class="text-primary">US</span> ?
+                        </h3>
+                        <p class="text-xs text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                            nonummy
+                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                            hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+                            nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                            praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                            Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy
+                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisl ut aliquip ex ea commodo consequat.
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+                            enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis</p>
+                        <a href="#"
+                            class="text-white text-xs border px-5 py-2 rounded-3xl my-5 inline-block hover:bg-white hover:text-black">LEARN
+                            MORE</a>
+                    </div>
+                    <div class="why-choose-image relative">
+                        <img src="./images/qs.png" alt="Why Choose Us" class="w-[150px] absolute top-0 right-0">
+                        <img src="./images/qs.png" alt="Why Choose Us" class="w-[150px] absolute top-0 left-0">
+                        <img src="./images/whyus.png" alt="question mark" class="question-mark">
+                    </div>
+                </div>
+                <div class="family text-center p-5">
+                    <img src="./images/logo-01.png" alt="logo" class="w-[400px] mx-auto" />
+                    <h3 class="uppercase text-4xl text-white font-bold mb-4">strong <span
+                            class="text-primary">family</span></h3>
+                    <p class="w-[70%] mx-auto text-white font-extralight">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Ipsum nihil mollitia, perspiciatis voluptate temporibus praesentium?Lorem
+                        ipsum dolor sit amet consectetur, adipisicing elit. </p>
+
+                    <div class="demographic-chart my-5 flex justify-center gap-10">
+                        <div class="chart-container">
+                            <div class="ring-chart" id="ringChart1"></div>
+                            <div class="percentage-labels" id="label1">0%</div>
+                            <div class="chart-title">Ring Chart 1</div>
+                        </div>
+
+                        <div class="chart-container">
+                            <div class="ring-chart" id="ringChart2"></div>
+                            <div class="percentage-labels" id="label2">0%</div>
+                            <div class="chart-title">Ring Chart 2</div>
+                        </div>
+
+                        <div class="chart-container">
+                            <div class="ring-chart" id="ringChart3"></div>
+                            <div class="percentage-labels" id="label3">0%</div>
+                            <div class="chart-title">Ring Chart 3</div>
+                        </div>
+
+                        <div class="chart-container">
+                            <div class="ring-chart" id="ringChart4"></div>
+                            <div class="percentage-labels" id="label4">0%</div>
+                            <div class="chart-title">Ring Chart 4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
