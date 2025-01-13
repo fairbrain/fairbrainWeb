@@ -688,6 +688,10 @@ video {
   display: none;
 }
 
+.h-\[150vh\]{
+  height: 150vh;
+}
+
 .h-\[250px\]{
   height: 250px;
 }
@@ -1130,10 +1134,50 @@ video {
 .hero {
   background: url('../images/background.jpg') no-repeat center center/cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .hero__content h1 {
   text-shadow: 0 0 8px rgba(253, 253, 253, 0.899);
+}
+
+.photo-collage .hero-image:nth-child(1){
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.photo-collage .hero-image:nth-child(2){
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.photo-collage .hero-image:nth-child(3){
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.photo-collage .hero-image:nth-child(4){
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.photo-collage .hero-image:nth-child(5){
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.photo-collage .hero-image:nth-child(6){
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .about-section {

@@ -32,10 +32,30 @@
 .hero {
   background: url('../images/background.jpg') no-repeat center center/cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .hero__content h1 {
   text-shadow: 0 0 8px rgba(253, 253, 253, 0.899);
+}
+
+.photo-collage .hero-image:nth-child(1) {
+  @apply absolute top-0 left-0;
+}
+.photo-collage .hero-image:nth-child(2) {
+  @apply absolute top-0 right-0;
+}
+.photo-collage .hero-image:nth-child(3) {
+  @apply absolute bottom-0 left-0;
+}
+.photo-collage .hero-image:nth-child(4) {
+  @apply absolute top-0 bottom-0 right-0;
+}
+.photo-collage .hero-image:nth-child(5) {
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2;
+}
+.photo-collage .hero-image:nth-child(6) {
+  @apply absolute bottom-0 right-0;
 }
 
 .about-section {
@@ -171,7 +191,6 @@
     white 0%,
     black 0% 100%
   );
-
   position: relative;
   clip-path: circle(50% at 50% 50%);
 }
