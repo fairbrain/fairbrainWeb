@@ -1168,7 +1168,7 @@ video {
 
 .photo-collage .hero-image:nth-child(5){
   position: absolute;
-  bottom: 0px;
+  bottom: 4rem;
   left: 50%;
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1178,6 +1178,10 @@ video {
   position: absolute;
   bottom: 0px;
   right: 0px;
+}
+
+.earth-canvas canvas{
+  margin-top: 350px;
 }
 
 .about-section {

@@ -52,10 +52,14 @@
   @apply absolute top-0 bottom-0 right-0;
 }
 .photo-collage .hero-image:nth-child(5) {
-  @apply absolute bottom-0 left-1/2 -translate-x-1/2;
+  @apply absolute bottom-16 left-1/2 -translate-x-1/2;
 }
 .photo-collage .hero-image:nth-child(6) {
   @apply absolute bottom-0 right-0;
+}
+
+.earth-canvas canvas{
+margin-top: 350px;
 }
 
 .about-section {

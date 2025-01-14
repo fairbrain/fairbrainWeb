@@ -12,8 +12,16 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <title>Fairbrain</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/"
+          }
+        }
+      </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body class="font-poppins">
@@ -53,6 +61,7 @@
         <!-- HERO SECTION -->
         <section class="hero bg-dark text-white py-20 h-[150vh]">
             <div class="container h-full relative">
+                
                 <div class="hero__content text-center flex flex-col items-center">
                     <h1 class="sm:text-5xl text-4xl font-bold">Your ‘ONE STOP’ Creative Source</h1>
                     <p class=" md:text-lg mt-4 md:w-[60%] w-full px-2 font-light text-sm">Lorem ipsum dolor sit amet,
@@ -69,7 +78,8 @@
                         </form>
                     </div>
                 </div>
-                <div class="photo-collage mt-8">
+                <div class="earth-canvas"></div>
+                <div class="photo-collage mt-8 ">
                     <img src="./images/hero-1.jpg" alt="hero image"
                         class="hero-image bg-white rounded-[50px] border-2 object-left object-cover mt-8 w-[300px] h-[300px]">
                     <img src="./images/hero-2.jpg" alt="hero image"
@@ -352,6 +362,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/custom_gsap.js"></script>
+    <script type="module" src="./js/custom_threejs_code.js"></script>
 </body>
 
 </html>
