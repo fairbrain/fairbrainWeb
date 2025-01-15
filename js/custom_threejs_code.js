@@ -17,7 +17,7 @@ const aspect = w / h;
 const near = 0.1;
 const far = 1000;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 10; // Adjusted for a better view of the earth
+camera.position.z = 9; // Adjusted for a better view of the earth
 
 // Scene setup
 const scene = new THREE.Scene();
@@ -44,13 +44,13 @@ const hemolight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.5); // Softer 
 scene.add(hemolight);
 
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
-sunLight.position.set(-2, 0.5, 2);
+// sunLight.position.set(-2, 0.5, 2);
 scene.add(sunLight);
 
 // Animation loop
 function animate(t = 0) {
     requestAnimationFrame(animate);
-    earthMesh.position.set(-1, -0.5, 2.5)
+    earthMesh.position.set(-1, -0.5, 0)
     // Rotate the earth
     earthMesh.rotation.y = t / 5000;
     earthMesh.position;

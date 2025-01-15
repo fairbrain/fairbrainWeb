@@ -82,6 +82,5 @@ $(document).ready(function () {
             if (start >= 100) clearInterval(interval);
         }, 1000 / fps);
     }
-
 });
 

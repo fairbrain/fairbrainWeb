@@ -59,10 +59,10 @@
     <!-- HEADER SECTION -->
     <main>
         <!-- HERO SECTION -->
-        <section class="hero bg-dark text-white py-20 h-[150vh]">
+        <section class="hero bg-dark text-white py-20 h-[150vh] ">
             <div class="container h-full relative">
-                
-                <div class="hero__content text-center flex flex-col items-center">
+
+                <div class="hero__content text-center flex flex-col items-center relative z-10">
                     <h1 class="sm:text-5xl text-4xl font-bold">Your ‘ONE STOP’ Creative Source</h1>
                     <p class=" md:text-lg mt-4 md:w-[60%] w-full px-2 font-light text-sm">Lorem ipsum dolor sit amet,
                         consectetuer adipiscing elit, sed
@@ -240,13 +240,13 @@
                 </h2>
                 <p class="w-[50%] text-sm mx-auto text-center text-white">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Deserunt eius assumenda mollitia quibusdam repudiandae porro.</p>
-                <div class="process-steps flex mt-5 gap-10 justify-center">
+                <div class="process-steps md:flex flex-col mt-5 gap-10 justify-center">
                     <div class="psteps text-center">
                         <div class="process-step mb-2">
                             <img src="./images/our process logo 6-01.png" alt="process logo">
                             <span>1</span>
                         </div>
-                        <p class="uppercase text-sm text-white font-semibold mb-2">request call</p>
+                        <p class="uppercase text-center text-sm text-white font-semibold mb-2">request call</p>
                         <p class="text-[10px] w-[120px] text-white">Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
                     <div class="psteps text-center">
@@ -364,6 +364,21 @@
     <script src="./js/main.js"></script>
     <script src="./js/custom_gsap.js"></script>
     <script type="module" src="./js/custom_threejs_code.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
 </body>
 
 </html>
