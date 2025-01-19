@@ -46,18 +46,12 @@ $(document).ready(function () {
     });
 
     // ring chart
-
-
     const charts = [
         { element: 'ringChart1', label: 'label1', percentage: 85 },
         { element: 'ringChart2', label: 'label2', percentage: 70 },
         { element: 'ringChart3', label: 'label3', percentage: 50 },
         { element: 'ringChart4', label: 'label4', percentage: 35 },
     ];
-
-    charts.forEach((chart) => {
-        animateRingChart(chart.element, chart.label, chart.percentage);
-    });
 
     function animateRingChart(elementId, labelId, percentage) {
         const element = document.getElementById(elementId);
@@ -77,10 +71,47 @@ $(document).ready(function () {
               black ${currentAngle}% 100%
             )`;
 
-            label.textContent = `${Math.round((percentage / 100) * start)}%`;
+            label.textContent = `${Math.round((percentage / 100) * start)}K`;
 
             if (start >= 100) clearInterval(interval);
         }, 1000 / fps);
     }
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const chart = charts.find(c => c.element === entry.target.id);
+                if (chart) {
+                    animateRingChart(chart.element, chart.label, chart.percentage);
+                    observer.unobserve(entry.target);
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    charts.forEach(chart => {
+        const element = document.getElementById(chart.element);
+        if (element) {
+            observer.observe(element);
+        }
+    });
+
+    // menu toggle
+
+    const menuToggle = document.querySelector('.nav__toggler');
+    const navMenu = document.querySelector('.navmenu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+
 });
 

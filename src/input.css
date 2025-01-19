@@ -29,6 +29,30 @@
   @apply hidden;
 }
 
+@media(max-width:768px) {
+  .navmenu {
+    position: fixed;
+    width: 60%;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    background-color: #ff5500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
+    transition: all 0.3s;
+  }
+
+  .navmenu.open{
+    left: 0;
+  }
+
+  .navmenu ul {
+    @apply flex-col items-center
+  }
+}
+
 .hero {
   background: url('../images/background.jpg') no-repeat center center/cover;
   background-attachment: fixed;
@@ -38,6 +62,7 @@
 .hero__content h1 {
   text-shadow: 0 0 8px rgba(253, 253, 253, 0.899);
 }
+
 
 .photo-collage .hero-image {
   transition: all 0.3s;
@@ -91,17 +116,18 @@
 .our-services {
   background: linear-gradient(rgba(41, 41, 41, 0.955), rgba(23, 23, 23, 0.653)),
     url('../images/service-bg.png') no-repeat center bottom/cover;
-  min-height: 120vh;
   background-attachment: fixed;
 }
 
 .our-portfolio {
   background: linear-gradient(rgba(41, 41, 41, 0.955), rgba(23, 23, 23, 0.653)),
     url('../images/service-bg.png') no-repeat center top/cover;
+  background-attachment: fixed;
+  @apply py-10;
 }
 
 .service-card img {
-  @apply w-full h-[250px] rounded-3xl border;
+  @apply w-full h-[350px] rounded-3xl border my-2;
 }
 
 .service-card {
@@ -130,12 +156,6 @@
   margin: auto;
 }
 
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  padding: 10px;
-}
 
 .tab-button {
   padding: 10px 15px;
@@ -182,8 +202,25 @@
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.899);
 }
 
+.psteps {
+  @apply relative transition-all;
+}
+
+.psteps:hover {
+  scale: 1.05
+}
+
+.psteps::after {
+  content: '';
+  @apply bg-[#ffffff] sm:inline hidden h-[3px] w-full absolute top-[50px] -z-10 -translate-y-1/2 transition-all duration-500;
+}
+
+.psteps:last-child::after {
+  @apply hidden;
+}
+
 .process-step {
-  @apply relative h-[100px] mx-auto justify-center flex aspect-square border-2 border-[#ffffff] rounded-full p-4;
+  @apply bg-[#353439] relative h-[100px] mx-auto justify-center flex aspect-square border-2 border-[#ffffff] rounded-full p-4;
 }
 
 .process-step span {
@@ -248,4 +285,9 @@
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+}
+
+footer {
+  background: url('../images/BG-01\ \(1\).png') no-repeat center center/cover;
+  background-attachment: fixed;
 }

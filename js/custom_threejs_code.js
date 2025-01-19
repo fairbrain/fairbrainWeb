@@ -50,7 +50,7 @@ scene.add(sunLight);
 // Animation loop
 function animate(t = 0) {
     requestAnimationFrame(animate);
-    earthMesh.position.set(-1, -0.5, 0)
+    earthMesh.position.set(-0.5, -0.5, 0)
     // Rotate the earth
     earthMesh.rotation.y = t / 5000;
     earthMesh.position;
