@@ -68,7 +68,7 @@ $(document).ready(function () {
             const currentAngle = (percentage / 100) * start;
             element.style.background = `conic-gradient(
               white 0% ${currentAngle}%,
-              black ${currentAngle}% 100%
+              #ff5500 ${currentAngle}% 100%
             )`;
 
             label.textContent = `${Math.round((percentage / 100) * start)}K`;

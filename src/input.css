@@ -210,9 +210,14 @@
   scale: 1.05
 }
 
+.process-step{
+  position: relative;
+
+}
+
 .psteps::after {
   content: '';
-  @apply bg-[#ffffff] sm:inline hidden h-[3px] w-full absolute top-[50px] -z-10 -translate-y-1/2 transition-all duration-500;
+  @apply bg-[#ffffff] sm:inline hidden h-[3px] w-full absolute top-[50px]  -translate-y-1/2 transition-all duration-500;
 }
 
 .psteps:last-child::after {
@@ -252,7 +257,7 @@
   border-radius: 50%;
   background: conic-gradient(white 0%,
       white 0%,
-      black 0% 100%);
+      #ff5500 0% 100%);
   position: relative;
   clip-path: circle(50% at 50% 50%);
 }
