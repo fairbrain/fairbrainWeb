@@ -103,3 +103,45 @@ window.addEventListener("load", () => {
         },
     });
 });
+
+gsap.to(".preloader", {
+    y: "100%",
+    duration: 2,
+    delay: 2,
+    display: "none",
+}
+)
+
+gsap.from("header", {
+    opacity: 0,
+    y: -100,
+    duration: 2,
+    delay: 3,
+});
+
+const herotl = gsap.timeline();
+
+herotl.from(".gsap-hero", {
+    opacity: 0,
+    y: -100,
+    duration: 1,
+    delay: 4,
+    stagger: 0.5,
+    ease:"back.out",
+});
+
+herotl.from(".earth-canvas", {
+    opacity: 0,
+    scale: 0,
+    duration: 5,
+    ease:"back.out",
+});
+herotl.from(".hero-image", {
+    opacity: 0,
+    scale: 0,
+    duration: 5,
+    ease:"back.out",
+});
+
+
+

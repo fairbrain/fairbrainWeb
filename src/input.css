@@ -4,6 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.loader:after {
+  box-shadow: 0 2px 0 #FF3D00 inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
 .navmenu__list li {
   @apply relative;
 }
@@ -44,7 +74,7 @@
     transition: all 0.3s;
   }
 
-  .navmenu.open{
+  .navmenu.open {
     left: 0;
   }
 
@@ -97,8 +127,8 @@
 }
 
 .earth-canvas canvas {
-  transform: translateY(50%);
-  scale: 1.2;
+transform: translateY(-70%);
+scale: 0.4;
 }
 
 
@@ -203,21 +233,21 @@
 }
 
 .psteps {
-  @apply relative transition-all;
+  @apply relative;
 }
 
 .psteps:hover {
   scale: 1.05
 }
 
-.process-step{
+.process-step {
   position: relative;
-
+  z-index: 20;
 }
 
 .psteps::after {
   content: '';
-  @apply bg-[#ffffff] sm:inline hidden h-[3px] w-full absolute top-[50px]  -translate-y-1/2 transition-all duration-500;
+  @apply bg-[#ffffff] sm:inline hidden h-[3px] w-full absolute top-[50px] z-10 -translate-y-1/2 transition-all duration-500;
 }
 
 .psteps:last-child::after {

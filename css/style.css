@@ -594,16 +594,16 @@ video {
   }
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
 
 .relative{
   position: relative;
-}
-
-.sticky{
-  position: sticky;
 }
 
 .left-3{
@@ -624,6 +624,10 @@ video {
 
 .z-10{
   z-index: 10;
+}
+
+.z-40{
+  z-index: 40;
 }
 
 .z-50{
@@ -677,6 +681,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[150px\]{
+  margin-top: 150px;
+}
+
 .inline-block{
   display: inline-block;
 }
@@ -717,6 +725,10 @@ video {
   height: 100%;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .w-\[120px\]{
   width: 120px;
 }
@@ -749,6 +761,10 @@ video {
   width: 100%;
 }
 
+.w-screen{
+  width: 100vw;
+}
+
 .grow{
   flex-grow: 1;
 }
@@ -762,6 +778,22 @@ video {
   --tw-scale-x: 1.5;
   --tw-scale-y: 1.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes bounce{
+  0%, 100%{
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50%{
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce{
+  animation: bounce 1s infinite;
 }
 
 .grid-cols-1{
@@ -1130,6 +1162,36 @@ video {
   outline-width: 0px;
 }
 
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+.loader:after {
+  box-shadow: 0 2px 0 #FF3D00 inset;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
 .navmenu__list li{
   position: relative;
 }
@@ -1189,7 +1251,7 @@ video {
     transition: all 0.3s;
   }
 
-  .navmenu.open{
+  .navmenu.open {
     left: 0;
   }
 
@@ -1260,8 +1322,8 @@ video {
 }
 
 .earth-canvas canvas {
-  transform: translateY(50%);
-  scale: 1.2;
+  transform: translateY(-70%);
+  scale: 0.4;
 }
 
 .about-section {
@@ -1384,20 +1446,22 @@ video {
 
 .psteps{
   position: relative;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .psteps:hover {
   scale: 1.05
 }
 
+.process-step {
+  position: relative;
+  z-index: 20;
+}
+
 .psteps::after {
   content: '';
   position: absolute;
   top: 50px;
-  z-index: -10;
+  z-index: 10;
   display: none;
   height: 3px;
   width: 100%;
@@ -1483,7 +1547,7 @@ video {
   border-radius: 50%;
   background: conic-gradient(white 0%,
       white 0%,
-      black 0% 100%);
+      #ff5500 0% 100%);
   position: relative;
   clip-path: circle(50% at 50% 50%);
 }
