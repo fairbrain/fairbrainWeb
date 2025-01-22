@@ -136,12 +136,13 @@ herotl.from(".earth-canvas", {
     duration: 5,
     ease:"back.out",
 });
-herotl.from(".hero-image", {
+herotl.from(".photo-collage", {
     opacity: 0,
     scale: 0,
     duration: 5,
     ease:"back.out",
 });
+
 
 
 

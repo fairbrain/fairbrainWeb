@@ -93,42 +93,8 @@
   text-shadow: 0 0 8px rgba(253, 253, 253, 0.899);
 }
 
-
-.photo-collage .hero-image {
-  transition: all 0.3s;
-}
-
-.photo-collage .hero-image:nth-child(1) {
-  @apply absolute top-[25%] left-[20%];
-}
-
-.photo-collage .hero-image:nth-child(2) {
-  @apply absolute top-[28%] right-[20%];
-}
-
-.photo-collage .hero-image:nth-child(3) {
-  @apply absolute bottom-0 left-[25%] z-10;
-}
-
-.photo-collage .hero-image:nth-child(4) {
-  @apply absolute -bottom-[5%] right-[40%];
-}
-
-.photo-collage .hero-image:nth-child(5) {
-  @apply absolute bottom-16 left-1/2 -translate-x-1/2;
-}
-
-.photo-collage .hero-image:nth-child(6) {
-  @apply absolute bottom-0 right-[15%];
-}
-
-.photo-collage .hero-image:hover {
-  @apply scale-105 z-10;
-}
-
-.earth-canvas canvas {
-transform: translateY(-70%);
-scale: 0.4;
+.earth-canvas canvas{
+  transform: translateY(-20%);
 }
 
 
