@@ -106,7 +106,7 @@ window.addEventListener("load", () => {
 
 gsap.to(".preloader", {
     y: "100%",
-    duration: 2,
+    duration: 0.5,
     delay: 2,
     display: "none",
 }
@@ -115,7 +115,7 @@ gsap.to(".preloader", {
 gsap.from("header", {
     opacity: 0,
     y: -100,
-    duration: 2,
+    duration: 0.3,
     delay: 3,
 });
 
@@ -124,24 +124,95 @@ const herotl = gsap.timeline();
 herotl.from(".gsap-hero", {
     opacity: 0,
     y: -100,
-    duration: 1,
+    duration: 0.3,
     delay: 4,
     stagger: 0.5,
-    ease:"back.out",
+    ease: "back.out",
 });
 
 herotl.from(".earth-canvas", {
     opacity: 0,
     scale: 0,
-    duration: 5,
-    ease:"back.out",
+    duration: 1,
+    ease: "back.out",
 });
-herotl.from(".photo-collage", {
+herotl.from(".photo-collage video", {
     opacity: 0,
-    scale: 0,
-    duration: 5,
-    ease:"back.out",
+    y: 100,
+    duration: 2,
+    ease: "back.out",
 });
+
+herotl.from("#img1", {
+    opacity: 0,
+    x: "-100%",
+    duration: 2,
+    ease: "back.out",
+}, "<");
+
+herotl.from("#img2", {
+    opacity: 0,
+    x: "100%",
+    duration: 2,
+    ease: "back.out",
+}, "<");
+
+herotl.from("#img3", {
+    opacity: 0,
+    x: "-100%",
+    duration: 2,
+    ease: "back.out",
+}, "<");
+
+herotl.from("#img4", {
+    opacity: 0,
+    x: "100%",
+    duration: 2,
+    ease: "back.out",
+}, "<");
+
+
+const scrollTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".photo-collage video",
+        y: 0,
+        start: "top 90%",
+        end: "bottom 90%",
+        scrub: 1,
+        markers: true,
+    },
+});
+
+scrollTl.to(".photo-collage video", {
+    duration: 5,
+    scale: 0.8,
+    ease: "back.out",
+
+},"<")
+.to("#img1", {
+    duration: 5,
+    x: "-100%",
+    opacity: 0,
+    ease: "back.out",
+},"<")
+.to("#img2", {
+    duration: 5,
+    x: "100%",
+    opacity: 0,
+    ease: "back.out",
+},"<")
+.to("#img3", {
+    duration: 5,
+    x: "-100%",
+    opacity: 0,
+    ease: "back.out",
+},"<")
+.to("#img4", {
+    duration: 5,
+    x: "100%",
+    opacity: 0,
+    ease: "back.out",
+},"<")
 
 
 

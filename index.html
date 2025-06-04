@@ -63,13 +63,12 @@
     <!-- HEADER SECTION -->
     <main>
         <!-- HERO SECTION -->
-        <section class="hero bg-dark text-white py-20 h-[900px] ">
+        <section class="hero bg-dark text-white py-20">
             <div class="container h-full relative">
-
                 <div class="hero__content relative z-20  mt-[150px] text-center flex flex-col items-center">
-                    <h1 class="sm:text-6xl text-2xl font-bold gsap-hero">Your ‘ONE STOP’ Creative Source</h1>
+                    <h1 class="font-bold gsap-hero">Your ‘ONE STOP’ Creative Source</h1>
                     <p class=" md:text-lg mt-4 md:w-[60%] w-full px-2 font-light text-sm gsap-hero">28 Years of Legacy
-                        in Providing Creative Heights to Businesses </p>
+                        in Providing Creative Heights to Businesses</p>
                     <div class="hero__search mt-8 gsap-hero">
                         <form action="#"
                             class="bg-[#767f81ba] border-white border text-white px-4 py-1 rounded-xl md:w-[700px] w-full flex items-center">
@@ -80,21 +79,16 @@
                         </form>
                     </div>
                 </div>
-                <div class="earth-canvas flex justify-center"></div>
-                <!-- <div class="photo-collage mt-8">
-                    <img src="./images/hero-1.jpg" alt="hero image"
-                        class="hero-image bg-white rounded-[50px] border-2 object-left object-cover mt-8 w-[300px] h-[300px]">
-                    <img src="./images/hero-2.jpg" alt="hero image"
-                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[250px] h-[250px]">
-                    <img src="./images/hero-3.jpg" alt="hero image"
-                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[250px] h-[250px]">
-                    <img src="./images/hero-4.jpg" alt="hero image"
-                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[250px] h-[250px]">
-                    <img src="./images/hero-5.jpg" alt="hero image"
-                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[350px] h-[350px]">
-                    <img src="./images/hero-6.jpg" alt="hero image"
-                        class="hero-image bg-white rounded-[50px] border-2 object-cover mt-8 w-[300px] h-[300px]">
-                </div> -->
+                <div class="earth-canvas flex justify-center absolute"></div>
+                <div class="photo-collage mt-8 relative z-30">
+
+                    <video src="./images/1905-AnonymousHome1920x1080.webm" id="hero_video" loop autoplay muted
+                        playsinline width="100%" class="rounded-3xl relative z-20" style="transform: scale(0.4) translateY(-400px);"></video>
+                    <img src="./images/hero-1.jpg" id="img1" alt="image" width="350" class="top-0 -z-10  left-[10%]">
+                    <img src="./images/hero-2.jpg" id="img2" alt="image" width="350" class="top-0 -z-10  right-[10%]">
+                    <img src="./images/hero-3.jpg" id="img3" alt="image" width="350" class="bottom-[20%] -z-10  left-[10%]">  
+                    <img src="./images/hero-5.jpg" id="img4" alt="image" width="350" class="bottom-[20%] -z-10  right-[10%]">
+                </div>
             </div>
         </section>
         <section class="about-section border-y-2 py-5">
