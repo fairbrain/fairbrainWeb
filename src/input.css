@@ -100,7 +100,8 @@
 }
 
 .earth-canvas canvas {
-  transform: translateY(-20%);
+  transform: translateY(-20%) translateX(-5%);
+  width: 100%;
 }
 
 

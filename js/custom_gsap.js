@@ -125,7 +125,7 @@ herotl.from(".gsap-hero", {
     opacity: 0,
     y: -100,
     duration: 0.3,
-    delay: 4,
+    delay: 3,
     stagger: 0.5,
     ease: "back.out",
 });
@@ -179,7 +179,7 @@ const scrollTl = gsap.timeline({
         start: "top 90%",
         end: "bottom 90%",
         scrub: 1,
-        markers: true,
+        // markers: true,
     },
 });
 
